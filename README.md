@@ -1,12 +1,19 @@
 # Technical Assignment Week 8
 
 from flask import Flask
+
 from flask import jsonify
+
 from flask import request
+
 import os
+
 import pymongo
+
 import time
+
 import uuid
+
 app = Flask(__name__)
 
 client = pymongo.MongoClient(
