@@ -1,28 +1,28 @@
 # Technical Assignment Week 8
 
-from flask import Flask
+    from flask import Flask
 
-from flask import jsonify
+    from flask import jsonify
 
-from flask import request
+    from flask import request
 
-import os
+    import os
 
-import pymongo
+    import pymongo
 
-import time
+    import time
 
-import uuid
+    import uuid
 
-app = Flask(__name__)
+    app = Flask(__name__)
 
-client = pymongo.MongoClient(
+    client = pymongo.MongoClient(
     f"mongodb+srv://rahman:{os.getenv('PW')}@cluster0.mzhjnwo.mongodb.net/?retryWrites=true&w=majority")
-db = client["sic-db"]
+    db = client["sic-db"]
 
 
-@app.route("/", methods=['POST'])
-def data():
+    @app.route("/", methods=['POST'])
+    def data():
     if request.method == "POST":
 
         data = request.get_json()
@@ -43,7 +43,7 @@ def data():
         return "Data Ditambahkan"
 
 
-if __name__ == "__main__":
+    if __name__ == "__main__":
     app.run(host="127.0.0.1", port=8000, debug=True)
 
 
