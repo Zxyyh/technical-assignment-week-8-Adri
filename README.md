@@ -17,7 +17,7 @@
     app = Flask(__name__)
 
     client = pymongo.MongoClient(
-    f"mongodb+srv://rahman:{os.getenv('PW')}@cluster0.mzhjnwo.mongodb.net/?retryWrites=true&w=majority")
+    f"mongodb+srv://adri:{os.getenv('PW')}@cluster0.mzhjnwo.mongodb.net/?retryWrites=true&w=majority")
     db = client["sic-db"]
 
 
